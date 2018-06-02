@@ -1,7 +1,10 @@
 package com.egobob.movk.downloader;
 
 import com.egobob.movk.urlprovider.UrlProvider;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("pictureDownloader")
 public class StubPictureDownloader implements PictureDownloader {
 
     private UrlProvider urlProvider;
@@ -9,6 +12,7 @@ public class StubPictureDownloader implements PictureDownloader {
     public StubPictureDownloader() {
     }
 
+    @Autowired
     public StubPictureDownloader(UrlProvider urlProvider) {
         this.urlProvider = urlProvider;
     }
