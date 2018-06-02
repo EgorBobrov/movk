@@ -1,0 +1,29 @@
+group 'egobob'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    springVersion = '5.0.6.RELEASE'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.egobob.movk.Movk'
+        )
+    }
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework', name: 'spring-context', version: springVersion
+    runtime group: 'org.springframework', name: 'spring-context', version: springVersion
+}
