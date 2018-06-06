@@ -28,6 +28,7 @@ class CodeReceiverImpl implements CodeReceiver {
     @Override
     public String getCode() {
         // TODO: receive real code using HTTP and redirect URL
-        return apiVersion + scope + appId + clientSecret + redirectUrl;
+        return "Request for " + redirectUrl + " will be sent by vk api v." + apiVersion +
+                " using scope '" + scope + "' by application " + appId;
     }
 }

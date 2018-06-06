@@ -11,7 +11,7 @@ public class StubUrlProviler implements UrlProvider {
 
     @Autowired
     @Override
-    public void setUrl(@Value("http://www.m.vk.com/ololorium") String url) {
+    public void setUrl(@Value("${auth.redirectUrl}") String url) {
         this.url = url;
     }
 
