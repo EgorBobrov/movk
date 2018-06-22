@@ -1,4 +1,4 @@
-package com.egobob.movk.config;
+package com.egobob.namegenerator.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

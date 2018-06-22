@@ -13,7 +13,7 @@
     <body>
         <h1>${greeting}</h1>
         <p>
-        The redirect URL is ${message}
+        The generated name is: ${message}
         </p>
     </body>
 </html>

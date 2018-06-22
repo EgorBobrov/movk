@@ -1,7 +1,8 @@
-package com.egobob.movk.web.controller;
+package com.egobob.namegenerator.web.controller;
 
-import com.egobob.movk.authorization.VkAuthorizer;
-import com.egobob.movk.urlprovider.UrlProvider;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
+import com.egobob.namegenerator.nameprovider.NameProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,12 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BaseController {
 
     @Autowired
-    UrlProvider urlProvider;
+    NameProvider nameProvider;
 
     @GetMapping("/")
     public String getIndexPage(Model model) {
         model.addAttribute("greeting", "Hello!");
-        model.addAttribute("message", urlProvider.getUrl());
+        model.addAttribute("message", nameProvider.getName("american"));
         return "index";
     }
 }
